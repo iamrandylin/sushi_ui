@@ -8,12 +8,12 @@ import TopBar from './components/TopBar'
 import FarmsProvider from './contexts/Farms'
 import ModalsProvider from './contexts/Modals'
 import TransactionProvider from './contexts/Transactions'
-// import SushiProvider from './contexts/SushiProvider'
+import SushiProvider from './contexts/SushiProvider'
 import useModal from './hooks/useModal'
 import theme from './theme'
 import Farms from './views/Farms'
 import Home from './views/Home'
-import Stake from './views//Farm/components/Stake'
+import Stake from './views/Stake'
 
 const App: React.FC = () => {
   const [mobileMenu, setMobileMenu] = useState(false)
@@ -38,6 +38,9 @@ const App: React.FC = () => {
           <Route path="/farms">
             <Farms />
           </Route>
+          <Route path="/staking">
+            <Stake />
+          </Route>
         </Switch>
       </Router>
       <Disclaimer />
@@ -49,16 +52,18 @@ const Providers: React.FC = ({ children }) => {
   return (
     <ThemeProvider theme={theme}>
       <UseWalletProvider
-        chainId={1}
+        chainId={3}
         connectors={{
           walletconnect: { rpcUrl: 'https://mainnet.eth.aragon.network/' },
         }}
       >
+        <SushiProvider>
           <TransactionProvider>
             <FarmsProvider>
               <ModalsProvider>{children}</ModalsProvider>
             </FarmsProvider>
           </TransactionProvider>
+        </SushiProvider>
       </UseWalletProvider>
     </ThemeProvider>
   )

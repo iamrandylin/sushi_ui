@@ -40,10 +40,10 @@ export const addressMap = {
 
 export const contractAddresses = {
   sushi: {
-    1: '0x6b3595068778dd592e39a122f4f5a5cf09c90fe2',
+    1: '0x670D1f9e7a1eCdb72307637b46fEd6c1EE41c2A6',
   },
   masterChef: {
-    1: '0xc2edad668740f1aa35e4d8f227fb8e17dca888cd',
+    1: '0xfaEe03E6826f59f3E0929A53989AAfc20e5D412F',
   },
   weth: {
     1: '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2',
@@ -70,16 +70,16 @@ UNI-V2 LP Address on mainnet for reference
 
 export const supportedPools = [
   {
-    pid: 12,
+    pid: 0,
     lpAddresses: {
-      1: '0xce84867c3c02b05dc570d0135103d3fb9cc19433',
+      1: '0xa916B4131F589cFDB3Ec174C0ffa63A1e2701252',
     },
     tokenAddresses: {
-      1: '0x6b3595068778dd592e39a122f4f5a5cf09c90fe2',
+      1: '0x670D1f9e7a1eCdb72307637b46fEd6c1EE41c2A6',
     },
-    name: 'Sushi Party!',
-    symbol: 'SUSHI-ETH UNI-V2 LP',
-    tokenSymbol: 'SUSHI',
+    name: 'Sushix Party!',
+    symbol: 'SUSHI-ETHx UNI-V2 LP',
+    tokenSymbol: 'SUSHIx',
     icon: '🍣',
   },
   {
